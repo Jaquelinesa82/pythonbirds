@@ -18,6 +18,11 @@ if __name__ == ' main ':
 
     for filho in maria.filhos:
         print(filho.nome)
+    maria.sobrenome = 'Ramalho'
+    del  maria.filhos
+    print(maria.__dict__)
+    print(jaque.__dict__)
+
 
 
 
