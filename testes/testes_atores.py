@@ -80,7 +80,7 @@ class AtorTestes(TestCase):
     def teste_colisao_somente_um_ator_destruido(self):
         'Teste de que um ator destruído não pode colidir com nenhum outro, mesmo que estejam próximos'
         ator = Ator(2, 2)
-        ator.colidir(ator, 0)  # colidindo ator com ele mesmo para alterar seu status para destruido
+        ator.colidir(ator, 0)  # colidindo ator com ele mesmo para alterar seu status para destruido.
         ator2 = Ator(2, 2)
         self.assert_nao_colisao(ator, ator2)
         self.assert_nao_colisao(Ator(2, 3), ator)
@@ -110,7 +110,7 @@ class AtorTestes(TestCase):
         self.assertEqual(' ', ator.caracter())
 
 
-    def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
+    def assert_colisao_atores_ativos(self, ator, ator2, intervalo = 1):
         """
         Se certifica que há colisão entre atores ativos
         Atenção: Esse não é método de teste porque nao se inicia com prefixo "text".
@@ -202,10 +202,8 @@ class PassaroVermelhoTests(PassaroBaseTests):
         passaro_vermelho.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('v', passaro_vermelho.caracter())
 
-
     def teste_velocidade_escalar(self):
         self.assertEqual(20, PassaroVermelho.velocidade_escalar)
-
 
     def teste_foi_lancado(self):
         """
@@ -257,7 +255,7 @@ class PassaroAmareloTests(PassaroBaseTests):
     def teste_velocidade_escalar(self):
         self.assertEqual(30, PassaroAmarelo.velocidade_escalar)
 
-    def teste_lacamento_vertical(self):
+    def teste_lancamento_vertical(self):
         """
         Tests de lançamento vertical. Nele, o passaro só se move verticalmente e sua posição y se matém contanstante
         :return:
